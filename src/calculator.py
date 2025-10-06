@@ -30,6 +30,15 @@ def test_subtract_negative_numbers():
     assert subtract(-1, -1) == 0
     assert subtract(-5, -3) == -2
 
+def power(a, b):
+    return a ** b
+
+def square_root(a):
+    if a < 0:
+        raise ValueError("Cannot calculate square root of negative number")
+    return a ** 0.5
+
+
 
 if __name__ == "__main__":
     print("🧮 Calculator Module")
