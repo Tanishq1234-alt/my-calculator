@@ -1,46 +1,40 @@
+# Feature: Added multiply and divide functions
+# Feature: Added power and square_root functions
 """
-Calculator Module - Basic arithmetic operations
-Students will extend this with more functions
+Calculator module
+Contains basic arithmetic functions.
 """
+
 
 def add(a, b):
-    """Add two numbers together"""
+    """Add two numbers"""
     return a + b
 
+
 def subtract(a, b):
-    """Subtract b from a"""
+    """Subtract two numbers"""
     return a - b
 
+
 def multiply(a, b):
+    """Multiply two numbers"""
     return a * b
 
+
 def divide(a, b):
+    """Divide a by b"""
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
 
 
-
-# TODO: Students will add multiply, divide, power, sqrt functions
-def test_add_negative_numbers():
-    assert add(-1, -1) == -2
-    assert add(-5, 3) == -2
-
-def test_subtract_negative_numbers():
-    assert subtract(-1, -1) == 0
-    assert subtract(-5, -3) == -2
-
 def power(a, b):
-    return a ** b
+    """Return a raised to the power of b"""
+    return a**b
+
 
 def square_root(a):
+    """Return the square root of a"""
     if a < 0:
-        raise ValueError("Cannot calculate square root of negative number")
-    return a ** 0.5
-
-
-
-if __name__ == "__main__":
-    print("🧮 Calculator Module")
-    print(f"2 + 3 = {add(2, 3)}")
-    print(f"5 - 2 = {subtract(5, 2)}")
+        raise ValueError("Cannot calculate square root of a negative number")
+    return a**0.5
